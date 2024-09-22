@@ -1,4 +1,4 @@
-from prefect import task, Flow
+from prefect import flow, task
 from text_processing import TextProcessing
 
 # Declaramos la tarea con Prefect
@@ -10,9 +10,10 @@ def text_processing_task(language: str, file_name: str, version: int):
     text_processing_processor.run(file_name=file_name, version=version)
 
 # Declaramos el flujo con Prefect
-@Flow(name="Flujo principal")
+@flow(name="Flujo principal")
 def main_flow():
-    text_processing_task(language="english", file_name="tickets_classification_eng", version=2)
+    text_processing_task(language="english", file_name="tickets_classification_eng", version=3)
 
 # Ejecutamos el flujo
-main_flow.run()
+if __name__ == "__main__":
+    main_flow()

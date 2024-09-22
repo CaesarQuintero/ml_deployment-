@@ -41,3 +41,4 @@ def load_pickle(filename) -> object:
     with open(filepath, 'rb') as file:
         data = pickle.load(file)
     return data
+

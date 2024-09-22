@@ -1,9 +1,9 @@
 """This config module contains the configuration for the pipeline with prefect"""
 
 # path with data processed
-DATA_PATH_PROCESSED = "/Users/mdurango/Proyect/Mlops-platzi/orchestration/data/data_processed"
+DATA_PATH_PROCESSED = "C:\\Users\\cesar.guerra\\Documents\\Rappi\\Temas personales\\Platzi\\Curso de despliegue y tracking MLFLOW\\Mlops-platzi\\orchestration\\data\\data_processed"
 # version of the data
-VERSION = 2
+VERSION = 3
 # language for the input parameter for the text processing class
 LANGUAGE = "english"
 # file name data input for the text processing class
